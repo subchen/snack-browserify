@@ -1,11 +1,6 @@
 var window = require('window');
 var $ = require('jquery');
 
-/**
- * @param {String} code - source code
- * @param {HTMLElement} node - parent node which append script tag, default is document.body
- * @param {String} path - a file name which display in source tab of chrome developer tool
- */
 module.export = function detectBrowser() {
     var html = $('html');
     var ua = window.navigator.userAgent;
