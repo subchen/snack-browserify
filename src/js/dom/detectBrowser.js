@@ -39,7 +39,7 @@ module.export = function detect() {
         env.firefox = true;
     } else if (ua.indexOf('msie') !== -1) {
         env.msie = true;
-    } else if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1 && ua.indexOf('edge') === -1) {
+    } else if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1) {
         env.safari = true;
     } else if (ua.indexOf('edge') !== -1) {
         env.msie = true;
