@@ -3,7 +3,7 @@ var $ = require('jquery');
 
 // os: windows, linux, mac, iphone, ipad, android, windowsphone
 // pc/mobile: pc, mobile
-// browser: chrome, firefox, safari, ie8-11, edge
+// browser: chrome, firefox, safari, msie8-11, msedge
 
 // http://www.useragentstring.com/pages/useragentstring.php
 module.export = function detect() {
@@ -42,7 +42,7 @@ module.export = function detect() {
     } else if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1) {
         env.safari = true;
     } else if (ua.indexOf('edge') !== -1) {
-        env.msie = true;
+        env.msedge = true;
     }
     
     // msie version
