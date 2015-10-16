@@ -29,8 +29,11 @@ module.export = function detect() {
     }
     
     // pc or mobile
-    env.pc = env.windows || env.mac || env.linux;
-    env.mobile = env.iphone || env.ipad || env.android || env.windowsphone;
+    if (env.windows || env.mac || env.linux) {
+        env.pc = true;
+    } else if (env.iphone || env.ipad || env.android || env.windowsphone) {
+        env.mobile = true;
+    }
     
     // browser
     if (ua.indexOf('chrome') !== -1 && ua.indexOf('edge') === -1) {
